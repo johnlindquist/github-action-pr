@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd .github/actions/list-pr-files
-          npm ci
+          npm install
 
       - name: List PR Files
         uses: ./.github/actions/list-pr-files
