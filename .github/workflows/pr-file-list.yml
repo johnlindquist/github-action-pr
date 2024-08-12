@@ -11,20 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v35
-
-      - name: Comment PR
-        uses: actions/github-script@v6
+      - name: List PR Files
+        uses: ./.github/actions/list-pr-files
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            const files = ${{ steps.changed-files.outputs.all_changed_files }}
-            const fileList = files.join('\n');
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `This PR includes the following files:\n\n${fileList}`
-            })
+          github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,9 @@
+name: 'List PR Files'
+description: 'Comments on a PR with a list of changed files'
+inputs:
+  github-token:
+    description: 'GitHub token'
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
