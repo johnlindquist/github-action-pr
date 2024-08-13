@@ -11,17 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: |
-          cd .github/actions/list-pr-files
-          npm install
-
       - name: List PR Files
-        uses: ./.github/actions/list-pr-files
+        uses: johnlindquist/github-action-list-files-on-push@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
