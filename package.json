@@ -1,0 +1,16 @@
+{
+  "name": "world-time-checker",
+  "version": "1.0.0",
+  "description": "A script to check times around the world",
+  "main": "scripts/check-time.ts",
+  "scripts": {
+    "check-time": "ts-node scripts/check-time.ts"
+  },
+  "dependencies": {
+    "moment-timezone": "^0.5.43"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}
