@@ -4,7 +4,10 @@
   "description": "A script to check times around the world",
   "main": "scripts/check-time.ts",
   "scripts": {
-    "check-time": "ts-node scripts/check-time.ts"
+    "check-time": "ts-node scripts/check-time.ts",
+    "convert-time": "ts-node scripts/convert-time.ts",
+    "list-timezones": "ts-node scripts/list-timezones.ts",
+    "current-time": "ts-node scripts/current-time.ts"
   },
   "dependencies": {
     "moment-timezone": "^0.5.43"
