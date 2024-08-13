@@ -15,3 +15,4 @@ jobs:
         uses: johnlindquist/github-action-list-files-on-push@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
