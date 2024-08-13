@@ -1,0 +1,1 @@
+- Always use "for of" instead of forEach/map/filter/reduce
